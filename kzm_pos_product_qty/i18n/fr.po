@@ -1,0 +1,307 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_pos_product_qty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-05 16:56+0000\n"
+"PO-Revision-Date: 2020-05-05 17:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__restrict_order
+msgid "Activate restrictions on products if our of stock"
+msgstr "Activer la restriction sur les quantités minimales d'articles"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__city
+msgid "City"
+msgstr "Ville"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/popup.xml:0
+#, python-format
+msgid "Close"
+msgstr "Fermer"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__country_id
+msgid "Country"
+msgstr "Pays"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__custom_msg
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Custom Message"
+msgstr "Message à afficher"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__description
+msgid "Description"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__prod_qty_limit
+msgid "Design the quantity minimun of a product remaining"
+msgstr "La quantité minimale pour la vente sur le PDV"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__display_name
+msgid "Display Name"
+msgstr "Afficher Nom"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__show_qty
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Display Stock"
+msgstr "Afficher le stock"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__display_warehouse_qty
+msgid "Display Warehouse Quantity"
+msgstr "Afficher la quantité sur l'entrepôt"
+
+#. module: kzm_pos_product_qty
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Display warehouse wise product quantity"
+msgstr "Afficher la quantité sur l'entrepôt"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__email
+msgid "Email"
+msgstr "Courriel"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__fax
+msgid "Fax"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__custom_msg
+msgid "Here is the specific message you want to display"
+msgstr "Le message qui s'affiche en cas de stock mininum"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__id
+msgid "ID"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__image
+msgid "Image"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__location_id
+msgid "Location"
+msgstr "Lieu"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model,name:kzm_pos_product_qty.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/product.xml:0
+#, python-format
+msgid "Product"
+msgstr "Article"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/js/models.js:0
+#: code:addons/kzm_pos_product_qty/static/src/js/models.js:0
+#, python-format
+msgid "Product Out of Stock"
+msgstr "Article en rupture de stock"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_qty/static/src/xml/product.xml:0
+#, python-format
+msgid "Product Quantity"
+msgstr "Quantité d’article"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/popup.xml:0
+#, python-format
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: kzm_pos_product_qty
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Restrict Order"
+msgstr "Quantités minimales"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__restrict_order
+msgid "Restrict Order When Out Of Stock"
+msgstr "Bloquer les commandes en cas de rupture de stock"
+
+#. module: kzm_pos_product_qty
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Restrict Order when Out of Stock"
+msgstr "Bloquer les commandes en cas de rupture de stock"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__prod_qty_limit
+msgid "Restrict When Product Qty Remains"
+msgstr "Quantité minimale d'article"
+
+#. module: kzm_pos_product_qty
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_qty.pos_qty_pos_config_form_view_inherit
+msgid "Restrict when Product quantity remains"
+msgstr "Quantité minimale d'article"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/js/tscreens.js:0
+#, python-format
+msgid "Server Down..."
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__state_id
+msgid "State"
+msgstr "État"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_config__stock_location_id
+msgid "Stock Location"
+msgstr "Emplacement de stock"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__store_manager
+msgid "Store Manager"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__street2
+msgid "Street2"
+msgstr "Rue 2"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__stock_location_id
+msgid "The product location"
+msgstr "L'emplacement du produit"
+
+#. module: kzm_pos_product_qty
+#: code:addons/kzm_pos_product_qty/models/pos_shop.py:0
+#, python-format
+msgid "This Location is already selected in another shop!"
+msgstr "L'emplacement est déjà utilisé sur un autre PDV"
+
+#. module: kzm_pos_product_qty
+#: code:addons/kzm_pos_product_qty/models/pos_shop.py:0
+#, python-format
+msgid "This email id is already existing!"
+msgstr "L'email existe déjà"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__show_qty
+msgid "To show the quantity of product in POS Screens"
+msgstr "Pour afficher les quantité sur l'écran du PDV"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,help:kzm_pos_product_qty.field_pos_config__display_warehouse_qty
+msgid "To show the quantity of product in Warehouse locations"
+msgstr "Pour afficher les quantités sur les emplacements"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/popup.xml:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#: model:ir.model,name:kzm_pos_product_qty.model_pos_shop
+msgid "Used to Store POS Shop Data."
+msgstr ""
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/product.xml:0
+#: code:addons/kzm_pos_product_qty/static/src/xml/product.xml:0
+#, python-format
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: kzm_pos_product_qty
+#. openerp-web
+#: code:addons/kzm_pos_product_qty/static/src/xml/popup.xml:0
+#: model:ir.model,name:kzm_pos_product_qty.model_stock_warehouse
+#, python-format
+msgid "Warehouse"
+msgstr "Entrepôt"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__website
+msgid "Website"
+msgstr "Site Web"
+
+#. module: kzm_pos_product_qty
+#: model:ir.model.fields,field_description:kzm_pos_product_qty.field_pos_shop__zip
+msgid "Zip"
+msgstr "Code postal"

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery="div.lsc" t-operation="append">
+            <t t-if="widget.pos.config.display_warehouse_qty">
+                       <div id="product_qty" title="Product Quantity" class="btn_icon_set">
+                           <img src="/kzm_pos_product_qty/static/src/img/icons/product_quantity2.png"/>
+                           <span class="btn_span_set"> Product</span>
+                       </div>
+                    </t>
+        </t>
+    </t>
+
+    <t t-extend="Product">
+        <t t-jquery=".product-name" t-operation="replace">
+            <div class="product-name" t-attf-id="article_product_#{product.id}">
+                <t t-if="product.product_variant_count &gt; 1 and product.original_name">
+                    <t t-esc="product.original_name"/>
+                </t>
+                <t t-if="product.product_variant_count &lt;= 1 or !product.original_name">
+                    <t t-esc="product.display_name"/>
+                </t>
+            </div>
+        </t>
+        <t t-jquery="[t-if='!product.to_weight'] .price-tag" t-operation="append">
+            <t t-if="widget.pos.config.use_pricelist and pricelist.id != widget.pos.default_pricelist.id
+                and product.get_price(widget.pos.default_pricelist, 1) != product.get_price(pricelist, 1)">
+                <br/>
+                <span style="text-decoration: line-through;color: red;"><t t-esc="widget.format_currency(product.get_price(widget.pos.default_pricelist, 1),'Product Price')"/></span>
+            </t>
+        </t>
+        <t t-jquery="[t-if='product.to_weight'] .price-tag" t-operation="append">
+            <t t-if="widget.pos.config.use_pricelist and pricelist.id != widget.pos.default_pricelist.id
+                and product.get_price(widget.pos.default_pricelist, 1) != product.get_price(pricelist, 1)">
+                <br/>
+                <span style="text-decoration: line-through;color: red;"><t t-esc="widget.format_currency(product.get_price(widget.pos.default_pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/></span>
+            </t>
+        </t>
+        <t t-jquery="div.product-img" t-operation="replace">
+            <div class="product-img">
+                <img t-att-src='image_url'/>
+            </div>
+        </t>
+        <t t-jquery="div.product-name" t-operation="after">
+            <span><t t-esc="widget.pos.config.show_qty" /> == <t t-esc="product.product_variant_count" /> </span>
+            <t t-if="!product.to_weight">
+                <t t-if="widget.pos.config.show_qty">
+                    <t t-if="product.product_variant_count &lt;= 1 or !product.product_variant_count">
+                        <div class="css_product_custom_qty">
+                            <t t-if="product.qty_available &gt; 0">
+                                <span class="product-qty">
+                                    <t t-esc="product.qty_available"/>
+                                </span>
+                            </t>
+                            <t t-if="product.qty_available &lt;= 0">
+                                <span class="product-qty-low">
+                                    <t t-esc="product.qty_available"/>
+                                </span>
+                            </t>
+                        </div>
+                    </t>
+                </t>
+                <div class="css_product_custom_price">
+                    <span class="price-tag price-tag1">
+<!--                         <t t-esc="widget.format_currency(product.list_price)"/> -->
+                        <t t-if="product.product_variant_count &gt; 1">
+                            <t t-esc="product.product_variant_count"/>
+                            Variants
+                        </t>
+                        <t t-if="product.product_variant_count &lt;= 1 or !product.product_variant_count">
+                            <t t-esc="widget.format_currency(product.lst_price)"/>
+                        </t>
+                    </span>
+                </div>
+            </t>
+            <t t-if="product.to_weight">
+                <t t-if="widget.pos.config.show_qty">
+                    <t t-if="product.product_variant_count &lt;= 1 or !product.product_variant_count">
+                        <div class="css_product_custom_qty">
+                            <t t-if="product.qty_available &gt; 0">
+                                <span class="product-qty">
+                                    <t t-esc="product.qty_available + ' Kgs'"/>
+                                </span>
+                            </t>
+                            <t t-if="product.qty_available &lt;= 0">
+                                <span class="product-qty-low">
+                                    <t t-esc="product.qty_available + ' Kgs'"/>
+                                </span>
+                            </t>
+                        </div>
+                    </t>
+                </t>
+                <div class="css_product_custom_price">
+                    <span class="price-tag price-tag1">
+<!--                         <t t-esc="widget.format_currency(product.list_price)+'/Kg'"/> -->
+                        <t t-if="product.product_variant_count &gt; 1">
+                            <t t-esc="product.product_variant_count"/>
+                            Variants
+                        </t>
+                        <t t-if="product.product_variant_count &lt;= 1 or !product.product_variant_count">
+                            <t t-esc="widget.format_currency(product.lst_price)+'/Kg'"/>
+                        </t>
+                    </span>
+                </div>
+            </t>
+        </t>
+    </t>
+
+</templates>
+

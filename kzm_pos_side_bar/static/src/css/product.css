@@ -1,0 +1,131 @@
+.pos .product .product-qty {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	vertical-align: top;
+	color: white;
+	line-height: 13px;
+	background: #6cc49b;
+	padding: 2px 5px;
+	border-radius: 2px;
+}
+
+.pos .product .product-qty-low {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	vertical-align: top;
+	color: white;
+	line-height: 13px;
+	background: red;
+	padding: 2px 5px;
+	border-radius: 2px;
+}
+
+.btn_icon_set {
+	line-height: 19px;
+	font-size: 24px;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	max-width: 97%;
+	margin: 4px 0px;
+	height: 39px;
+}
+
+
+.btn_span_set {
+	line-height: 43px;
+	font-size: 14px;
+	width: 66%;
+	text-align: left;
+	float: left;
+	position: relative;
+	height: 41px;
+	font-size: 16px;
+
+}
+
+.left_option_menu {
+	/* height: 100%;
+	width: 137px;
+	position: absolute; */
+	height: 100%;
+	position: absolute;
+	width: 161px;
+	margin: 0px 1px;
+}
+
+#left-sidebar-content {
+	height: 100%;
+}
+.lsc {
+	height: 100%;
+}
+
+.btn_icon_set img {
+	height: 39px;
+	width: 100%;
+	max-width: 27%;
+	float: left;
+	margin: 0px 5px;
+}
+
+.pos .leftpane {
+	left: 167px;
+}
+
+.pos .rightpane {
+    left: 603px;
+}
+
+.warehouse_css {
+	border-top: 1px solid #3e3e3e;
+	border-bottom: 1px solid #3e3e3e;
+}
+
+#pos_return_choice {
+	height: 100%;
+}
+
+#pos_return_choice #choice_without_receipt, #pos_return_choice #choice_with_receipt
+	{
+	float: left;
+	width: 50%;
+	border-radius: 15px;
+}
+
+#pos_return_choice #choice_without_receipt:active, #pos_return_choice #choice_with_receipt:active
+	{
+	/*    box-shadow: 0 5px #666;
+*/
+	transform: translateY(4px);
+}
+
+.pos .popup.popup-textinput.pos_popup_background.pos_add_to_wallet img {
+	width: 100%;
+	max-width: 35%;
+	margin: 0 auto;
+}
+
+.pos .popup.popup-textinput.pos_popup_background.pos_add_to_wallet h1 {
+	font-size: 20px;
+	margin: 9px auto;
+}
+
+.popup.popup-textinput.pos_popup_background .pos_add_to_wallet img {
+	width: 100%;
+	max-width: 174px;
+	margin: 0 auto;
+	height: 131px;
+}
+
+.popup .pos_popup_background .product .price-tag {
+	right: 0px;
+}
+
+.selected-menu {
+	background: #7f82ac none repeat scroll 0 0 !important;
+	border-color: transparent;
+	color: white;
+}

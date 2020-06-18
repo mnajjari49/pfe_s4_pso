@@ -1,0 +1,497 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_pos_product_return
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 16:59+0000\n"
+"PO-Revision-Date: 2020-05-11 16:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/tscreens.js:0
+#, python-format
+msgid "A Customer Name Is Required"
+msgstr "Un client est requis"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,help:kzm_pos_product_return.field_pos_config__enable_pos_return
+msgid "Allow to return product from POS"
+msgstr "Activer les retours d'article depuis le PDV"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Apply"
+msgstr "Appliquer"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order__back_order
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__back_order
+msgid "Back Order"
+msgstr "Reçu d'origine"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__cancel_item
+msgid "Cancel Item"
+msgstr "Annuler élément"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Close"
+msgstr "Fermer"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__line_note
+msgid "Comment"
+msgstr "Commentaires"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Company:"
+msgstr "Société:"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__cost_price
+msgid "Cost"
+msgstr "Coût"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: kzm_pos_product_return
+#: code:addons/kzm_pos_product_return/models/point_of_sale.py:0
+#, python-format
+msgid "Customer Invoice"
+msgstr "Facture client"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#, python-format
+msgid "Delivery Order?"
+msgstr "Commandes?"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Discount"
+msgstr "Remise"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Discount Type:"
+msgstr "Type de remise"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/tscreens.js:0
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr "Erreur: Les modifications n'ont pas été sauvegardées"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields.selection,name:kzm_pos_product_return.selection__pos_order_line__line_status__full
+msgid "Fully Cancelled"
+msgstr "Complètement annulée"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__deliver
+msgid "Is deliver"
+msgstr "Est livré"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/product.xml:0
+#, python-format
+msgid "Item Return"
+msgstr "Retours"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__location_id
+msgid "Location"
+msgstr "Lieu"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/popup.js:0
+#, python-format
+msgid "No item found"
+msgstr "Aucun article trouvé"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/popup.js:0
+#, python-format
+msgid "No result found"
+msgstr "Aucun résultat"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields.selection,name:kzm_pos_product_return.selection__pos_order_line__line_status__nothing
+msgid "Nothing"
+msgstr "Rien"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/popup.js:0
+#, python-format
+msgid "Order "
+msgstr "Commande "
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Order Date"
+msgstr "Date"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Order Date:"
+msgstr "Date:"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Order Details"
+msgstr "Details de commande"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Order Ref"
+msgstr "Réf"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Order Ref:"
+msgstr "Référence de commande:"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__line_status
+msgid "Order Status"
+msgstr "État de commande"
+
+#. module: kzm_pos_product_return
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_return.test_pos_config_form_view_inherit
+msgid "Order/Product Return"
+msgstr "Retour d'article/commande"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Orders"
+msgstr "Retourner commandes"
+
+#. module: kzm_pos_product_return
+#: code:addons/kzm_pos_product_return/models/point_of_sale.py:0
+#, python-format
+msgid "Please provide a partner for the sale."
+msgstr "Veuillez renseigner un partenaire pour la vente"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields.selection,name:kzm_pos_product_return.selection__pos_order_line__line_status__partial
+msgid "Partially Cancelled"
+msgstr "Partiellement annulée"
+
+#. module: kzm_pos_product_return
+#: model:ir.model,name:kzm_pos_product_return.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: kzm_pos_product_return
+#: model:ir.model,name:kzm_pos_product_return.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Lignes de commandes"
+
+#. module: kzm_pos_product_return
+#: model:ir.model,name:kzm_pos_product_return.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Price"
+msgstr "Prix"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_config__enable_print_valid_days
+msgid "Print Product Return Valid days"
+msgstr "Imprimer le nombre de jours de validité"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,help:kzm_pos_product_return.field_pos_config__enable_print_valid_days
+msgid "Prod"
+msgstr ""
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Product"
+msgstr "Article"
+
+#. module: kzm_pos_product_return
+#: model_terms:ir.ui.view,arch_db:kzm_pos_product_return.test_pos_config_form_view_inherit
+msgid "Product return"
+msgstr "Retour d'article"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Receipt Ref"
+msgstr "Référence de reçu"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Receipt Ref:"
+msgstr "Référence de reçu:"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Receipt Reprint"
+msgstr "Re-imprimer"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Return Order"
+msgstr "Retourner"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Return Order Barcode"
+msgstr "Retourner Commande: Code barre"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order__parent_return_order
+msgid "Return Order ID"
+msgstr "Retour de commande ID"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_config__enable_pos_return
+msgid "Return Order/Products"
+msgstr "Retour de commande/articles"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__return_process
+msgid "Return Process"
+msgstr "Processus de retour"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Return Products"
+msgstr "Retourner Produits"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Return Qty"
+msgstr "Quantité retournée"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order__return_seq
+msgid "Return Sequence"
+msgstr "Séquence de retour"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__return_valid_days
+msgid "Return Valid Days"
+msgstr "Jours de validité de retour"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order__return_order
+msgid "Return order"
+msgstr "Commande de retour"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Scan barcode of Order"
+msgstr "Scanner le code-barre de la commande"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Search Orders"
+msgstr "Chercher commandes"
+
+#. module: kzm_pos_product_return
+#: code:addons/kzm_pos_product_return/models/point_of_sale.py:0
+#, python-format
+msgid "Select Operation"
+msgstr "Sélectionner opération"
+
+#. module: kzm_pos_product_return
+#: model:ir.model.fields,field_description:kzm_pos_product_return.field_pos_order_line__serial_nums
+msgid "Serials"
+msgstr "Séries"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Session:"
+msgstr ""
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#, python-format
+msgid "Sorry, Delivery only allow with Sale Mode!"
+msgstr "Désolé, la livraison n'est autorisé qu'en mode de vente!"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#, python-format
+msgid "Sorry, This operation only allow with Sale Mode!"
+msgstr "Désolé, cette opération n'est autorisé qu'en mode de vente!"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/popup.js:0
+#, python-format
+msgid "Sorry, You can not return unpaid/cancel order"
+msgstr "Désolé, vous ne pouvez pas retournez des commandes impayées ou annulées"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Status:"
+msgstr "État:"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/screens.xml:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Total Amount:"
+msgstr "Montant total:"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Validate"
+msgstr "Valider"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "With Receipt"
+msgstr "Avec reçu de commande"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/xml/popup.xml:0
+#, python-format
+msgid "Without Receipt"
+msgstr "Sans reçu de commande"
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#, python-format
+msgid "You want to make delivery order?"
+msgstr ""
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/models.js:0
+#, python-format
+msgid "You want to remove delivery order?"
+msgstr ""
+
+#. module: kzm_pos_product_return
+#. openerp-web
+#: code:addons/kzm_pos_product_return/static/src/js/tscreens.js:0
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr ""
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__pos_reference
+msgid "Receipt Number"
+msgstr "Reçu de commande"
+

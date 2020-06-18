@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <record id="res_users_view_form" model="ir.ui.view">
+           <field name="name">res.users.form.view</field>
+           <field name="model">res.users</field>
+           <field name="inherit_id" ref="kzm_pos_config.res_users_view_form"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//page[@name='kzm_pos']" position="inside">
+                   <group  string="Bag access">
+                       <field name="access_bag_charges"/>
+                   </group>
+               </xpath>
+           </field>
+       </record>
+</odoo>

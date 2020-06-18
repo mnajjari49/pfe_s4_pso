@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="customer_display_pos_config_form_view_inherit" model="ir.ui.view">
+        <field name="name">pos.config.form.view.inherit</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="kzm_pos_config.kzm_pos_config_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='kzm_pos_config']" position='inside'>
+                <div class="col-xs-12 col-md-6 o_setting_box" id="customer_display">
+                        <div class="o_setting_left_pane">
+                            <field name="customer_display"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="customer_display" string="Customer Display"/>
+                            <div class="text-muted">
+                                Customer Display
+                            </div>
+<!--                            <div class="content-group mt16" attrs="{'invisible' : [('customer_display', '=', False)]}">-->
+<!--                                <div class="row mt16">-->
+<!--                                    <label string="Image Time Interval" for="image_interval"-->
+<!--                                           class="col-md-3 o_light_label" style="width: 150px;"/>-->
+<!--                                    <field name="image_interval"/>-->
+<!--                                </div>-->
+<!--                                <div class="text-muted" id="image_interval">-->
+<!--                                    Time interval calculate based on seconds-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <field name="customer_display_details_ids" style="width: 100%;"-->
+<!--                                   attrs="{'invisible' : [('customer_display', '=', False)]}">-->
+<!--                                <tree editable="bottom">-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="image"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+                        </div>
+<!--                        <div class="o_setting_right_pane">-->
+<!--                            <group attrs="{'invisible' : [('customer_display', '=', False)]}">-->
+<!--                                <field name="enable_customer_rating"/>-->
+<!--                            </group>-->
+<!--                        </div>-->
+<!--                        <div class="o_setting_right_pane">-->
+<!--                            <group attrs="{'invisible' : [('customer_display', '=', False)]}">-->
+<!--                                <field name="set_customer"/>-->
+<!--                            </group>-->
+<!--                        </div>-->
+                    </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

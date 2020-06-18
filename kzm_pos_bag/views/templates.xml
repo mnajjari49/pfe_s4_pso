@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:-->
+<odoo>
+    <data>
+        <template id="index" name="flexipharmacy_ee index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/kzm_pos_bag/static/src/js/screens.js"></script>
+                <script type="text/javascript" src="/kzm_pos_bag/static/src/js/models.js"></script>
+                <script type="text/javascript" src="/kzm_pos_bag/static/src/js/popup.js"></script>
+                <script type="text/javascript" src="/kzm_pos_bag/static/src/js/db.js"></script>
+
+<!--               <link rel="stylesheet" type="text/css" href="/kzm_pos_bag/static/src/css/pos.css"/>-->
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_bag/static/src/css/product_test.css"/>
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_bag/static/src/css/pos.css"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

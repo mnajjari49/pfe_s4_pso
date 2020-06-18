@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:-->
+<odoo>
+    <data>
+        <template id="index" name="templates index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+
+
+                <script type="text/javascript" src="/kzm_pos_cash_in_out/static/src/js/tscreens.js"></script>
+                <script type="text/javascript" src="/kzm_pos_cash_in_out/static/src/js/models.js"></script>
+                <script type="text/javascript" src="/kzm_pos_cash_in_out/static/src/js/db.js"></script>
+                <script type="text/javascript" src="/kzm_pos_cash_in_out/static/src/js/popup.js"></script>
+<!--                <script type="text/javascript" src="/kzm_pos_cash_in_out/static/src/js/test.js"></script>-->
+
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_cash_in_out/static/src/css/product.css"/>
+
+
+            </xpath>
+        </template>
+
+
+
+    </data>
+</odoo>

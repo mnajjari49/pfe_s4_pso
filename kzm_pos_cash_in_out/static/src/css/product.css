@@ -1,0 +1,263 @@
+.pos .product .product-qty {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	vertical-align: top;
+	color: white;
+	line-height: 13px;
+	background: #6cc49b;
+	padding: 2px 5px;
+	border-radius: 2px;
+}
+
+.pos .product .product-qty-low {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	vertical-align: top;
+	color: white;
+	line-height: 13px;
+	background: red;
+	padding: 2px 5px;
+	border-radius: 2px;
+}
+
+.btn_icon_set {
+	line-height: 19px;
+	font-size: 24px;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	max-width: 97%;
+	margin: 4px 0px;
+	height: 39px;
+}
+
+
+.btn_span_set {
+	line-height: 43px;
+	font-size: 14px;
+	width: 66%;
+	text-align: left;
+	float: left;
+	position: relative;
+	height: 41px;
+	font-size: 16px;
+
+}
+
+.left_option_menu {
+	/* height: 100%;
+	width: 137px;
+	position: absolute; */
+	height: 100%;
+	position: absolute;
+	width: 161px;
+	margin: 0px 1px;
+}
+
+#left-sidebar-content {
+	height: 100%;
+}
+
+.btn_icon_set img {
+	height: 39px;
+	width: 100%;
+	max-width: 27%;
+	float: left;
+	margin: 0px 5px;
+}
+
+.pos .leftpane {
+	left: 167px;
+}
+
+.pos .rightpane {
+    left: 603px;
+}
+
+.warehouse_css {
+	border-top: 1px solid #3e3e3e;
+	border-bottom: 1px solid #3e3e3e;
+}
+
+#pos_return_choice {
+	height: 100%;
+}
+
+#pos_return_choice #choice_without_receipt, #pos_return_choice #choice_with_receipt
+	{
+	float: left;
+	width: 50%;
+	border-radius: 15px;
+}
+
+#pos_return_choice #choice_without_receipt:active, #pos_return_choice #choice_with_receipt:active
+	{
+	/*    box-shadow: 0 5px #666;
+*/
+	transform: translateY(4px);
+}
+
+.pos .popup.popup-textinput.pos_popup_background.pos_add_to_wallet img {
+	width: 100%;
+	max-width: 35%;
+	margin: 0 auto;
+}
+
+.pos .popup.popup-textinput.pos_popup_background.pos_add_to_wallet h1 {
+	font-size: 20px;
+	margin: 9px auto;
+}
+
+.popup.popup-textinput.pos_popup_background .pos_add_to_wallet img {
+	width: 100%;
+	max-width: 174px;
+	margin: 0 auto;
+	height: 131px;
+}
+
+.popup .pos_popup_background .product .price-tag {
+	right: 0px;
+}
+
+.selected-menu {
+	background: #7f82ac none repeat scroll 0 0 !important;
+	border-color: transparent;
+	color: white;
+}
+.title_in_out {
+	font-size: 16px;
+	/*    border-bottom: solid 3px rgb(110, 200, 155) !important;
+*/
+}
+.pos .popup .money_in_out_css {
+	text-align: left;
+	margin: 0 33px;
+}
+.pos .in_out_popup .in-out-statment .insert-date {
+	height: 31px;
+	font-size: 16px;
+	width: 150px;
+	padding: 0 0;
+	min-height: 0;
+	margin: 10px;
+}
+.pos .popup .title {
+	background: #373737;
+	color: #fff;
+	padding: 15px;
+}
+
+.cash_operation_popup {
+	height: 350px !important;
+}
+
+.cash_operation_popup .container table {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.cash_operation_popup .container table td {
+	padding: 10px;
+	font-size: 16px;
+}
+
+.cash_operation_popup .container table td input {
+	min-height: 0px;
+	height: 37px;
+	font-size: 16px;
+}
+
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	position: relative;
+	z-index: 999999;
+}
+
+.alert h4 {
+	margin-top: 0;
+	color: inherit;
+}
+
+.alert .alert-link {
+	font-weight: bold;
+}
+
+.alert>p, .alert>ul {
+	margin-bottom: 0;
+}
+
+.alert>p+p {
+	margin-top: 5px;
+}
+
+.alert-dismissable, .alert-dismissible {
+	padding-right: 35px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	color: inherit;
+}
+
+.alert-success {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+.alert-success hr {
+	border-top-color: #c9e2b3;
+}
+
+.alert-success .alert-link {
+	color: #2b542c;
+}
+
+.alert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+.alert-info hr {
+	border-top-color: #a6e1ec;
+}
+
+.alert-info .alert-link {
+	color: #245269;
+}
+
+.alert-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+
+.alert-warning hr {
+	border-top-color: #f7e1b5;
+}
+
+.alert-warning .alert-link {
+	color: #66512c;
+}
+
+.alert-danger {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.alert-danger hr {
+	border-top-color: #e4b9c0;
+}
+
+.alert-danger .alert-link {
+	color: #843534;
+}

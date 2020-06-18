@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="BagSelectionPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup pos_popup_background">
+
+                <p class="title pos_popup_title_background" style="background-color: #454545; color: #fff;">Bag Charges </p>
+                <div class="ac_product_list" style="max-height: 200px;">
+                    <t t-foreach='widget.pos.db.get_product_by_category(0)'
+                       t-as='product'>
+                        <t t-if="product.is_packaging">
+                            <span class='product product_content'
+                                  t-att-data-product-id="product.id">
+                                <div class="product-img">
+                                    <img
+                                            t-att-src='widget.get_product_image_url(product.id)'/>
+                                    <t t-if="!product.to_weight">
+                                        <span class="price-tag" style="background-color: #454545; color: #fff;" >
+                                            <t
+                                                    t-esc="widget.format_currency(product.list_price,'Product Price')"/>
+                                        </span>
+                                    </t>
+                                    <t t-if="product.to_weight">
+                                        <span class="price-tag">
+                                            <t
+                                                    t-esc="widget.format_currency(product.list_price,'Product Price')+'/Kg'"/>
+                                        </span>
+                                    </t>
+                                </div>
+                                <div class="product-name">
+                                    <div class="qty_buttons"  >
+                                    <div class="input-group oe_website_spinner bag_product" style="margin: auto">
+                                            <span class="input-group-addon">
+                                                <a t-attf-href="#"
+                                                   class="mb8 js_qty">
+                                                    <i class="fa fa-minus"></i>
+                                                </a>
+                                            </span>
+                                          <input type="text"
+                                                   class="js_quantity form-control" maxlength="2" data-max="2000"
+                                                   data-min="1" value="1"
+                                                   t-att-id="product.id" t-att-prod-id="product.id" style="width: 40%; height: 10%; text-align: center"/>
+                                            <span class="input-group-addon">
+                                                <a t-attf-href="#"
+                                                   class="mb8 float_left js_qty">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <t t-esc="product.display_name"/>
+                                </div>
+                            </span>
+                        </t>
+                    </t>
+                    <div id="total_container">
+                        <div id="sub_container">
+                            <span style="font-size:14px;">
+                                <input id="chk_bag_charges" type="checkbox"
+                                       style="width:5%;min-height:0%;margin-left: 22px;box-shadow: unset !important;"/>
+                                <span style="margin-right: 54px;">Include Bag Charges</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span id="bag_charges_total"
+                          style="float: left; padding-left: 14px; padding-top: 17px;"/>
+                    <div
+                            class="button pos_aces_pharmacy confirm pos_popup_footer_button" style="background-color: #454545; color: #fff;">
+                        Select
+                    </div>
+                    <div
+                            class="button press_cancel cancel pos_popup_footer_button" style="background-color: #454545; color: #fff;">
+                        Close
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

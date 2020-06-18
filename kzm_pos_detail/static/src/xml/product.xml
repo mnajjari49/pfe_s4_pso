@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="Chrome">
+        <t t-jquery="div.pos-branding" t-operation="replace">
+            <div class="pos-branding">
+                <span class="pos-cart-info">
+                    <span class="placeholder-PosCartCountWidget"></span>
+                </span>
+            </div>
+            <div class="show-left-cart" style="display:none;left:0px;">
+                Cart Data
+            </div>
+        </t>
+    </t>
+    <t t-name="PosCartCountWidget">
+        <div id="pos-cart" style="width: 40px;">
+            <span><img src="/kzm_pos_detail/static/src/img/cart.png" style="width: 44px;"/></span>
+            <span class="cart-num">0</span>
+        </div>
+    </t>
+</templates>

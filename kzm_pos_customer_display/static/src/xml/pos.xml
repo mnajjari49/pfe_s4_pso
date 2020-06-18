@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="Chrome">
+        <t t-jquery="div.pos-rightheader" t-operation="append">
+            <t t-if="widget.pos.config and widget.pos.config.customer_display">
+                <div class="oe_status" id="customer_display">
+                    <a title="Customer Display" href="#">
+                        <i class="fa fa-desktop" style="margin-top: 4px"></i>
+                    </a>
+                </div>
+            </t>
+        </t>
+    </t>
+
+</templates>

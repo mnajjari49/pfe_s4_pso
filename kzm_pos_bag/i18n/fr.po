@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_pos_bag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 10:01+0000\n"
+"PO-Revision-Date: 2020-06-05 10:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kzm_pos_bag
+#: model:ir.model.fields,help:kzm_pos_bag.field_pos_config__enable_bag_charges
+msgid "Allow bag charges in POS"
+msgstr "Activer les frais de sacs sur le PDV"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/product.xml:0
+#, python-format
+msgid "Apply Bag Charges"
+msgstr "Appliquer les frais de sacs"
+
+#. module: kzm_pos_bag
+#: model:product.product,name:kzm_pos_bag.bags_prod
+#: model:product.template,name:kzm_pos_bag.bags_prod_product_template
+msgid "Bag"
+msgstr "Sac"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/popup.xml:0
+#: model:ir.model.fields,field_description:kzm_pos_bag.field_pos_config__enable_bag_charges
+#: model:ir.model.fields,field_description:kzm_pos_bag.field_res_users__access_bag_charges
+#: model_terms:ir.ui.view,arch_db:kzm_pos_bag.aspl_pos_config_view_form
+#, python-format
+msgid "Bag Charges"
+msgstr "Frais sac"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/product.xml:0
+#, python-format
+msgid "Bag charges"
+msgstr "Frais de sac"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/popup.xml:0
+#, python-format
+msgid "Close"
+msgstr "Fermer"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/popup.xml:0
+#, python-format
+msgid "Include Bag Charges"
+msgstr "Inclure les frais de sacs"
+
+#. module: kzm_pos_bag
+#: model:ir.model.fields,field_description:kzm_pos_bag.field_product_product__is_packaging
+#: model:ir.model.fields,field_description:kzm_pos_bag.field_product_template__is_packaging
+msgid "Is Packaging"
+msgstr "Est un paquet"
+
+#. module: kzm_pos_bag
+#: model:ir.model,name:kzm_pos_bag.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: kzm_pos_bag
+#: model:ir.model,name:kzm_pos_bag.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: kzm_pos_bag
+#. openerp-web
+#: code:addons/kzm_pos_bag/static/src/xml/popup.xml:0
+#, python-format
+msgid "Select"
+msgstr "Sélectionner"
+
+#. module: kzm_pos_bag
+#: model:product.product,uom_name:kzm_pos_bag.bags_prod
+#: model:product.template,uom_name:kzm_pos_bag.bags_prod_product_template
+msgid "Units"
+msgstr "Unités"
+
+#. module: kzm_pos_bag
+#: model:ir.model,name:kzm_pos_bag.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"

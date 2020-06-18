@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_pos_customer_display
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 12:00+0000\n"
+"PO-Revision-Date: 2020-06-07 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,help:kzm_pos_customer_display.field_pos_config__customer_display
+msgid "Allow to show customer display"
+msgstr "Activer l'affichage client"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Change:"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,help:kzm_pos_customer_display.field_pos_config__set_customer
+msgid "Create or select customer in customer display"
+msgstr "Créer ou sélectionner un client dans depuis l'affichage client"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/pos.xml:0
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_pos_config__customer_display
+#: model_terms:ir.ui.view,arch_db:kzm_pos_customer_display.customer_display_pos_config_form_view_inherit
+#, python-format
+msgid "Customer Display"
+msgstr "Affichage client"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_pos_config__customer_display_details_ids
+msgid "Customer Display Details"
+msgstr "Détails d'affichages client"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_pos_config__enable_customer_rating
+msgid "Customer Display Rating"
+msgstr "Notes d'affichage clients"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Customer Name:"
+msgstr "Nom du client:"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/js/pos.js:0
+#, python-format
+msgid "Destroy Current Order ?"
+msgstr "Abandonner la commande courante?"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__display_name
+msgid "Display Name"
+msgstr "Afficher Nom"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Email:"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__id
+msgid "ID"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__image
+msgid "Image"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_pos_config__image_interval
+msgid "Image Interval"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,help:kzm_pos_customer_display.field_pos_config__customer_display_details_ids
+msgid "Images details"
+msgstr "Détails d'images"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Mobile:"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Name:"
+msgstr "Nom"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_customer_display__config_id
+msgid "POS config"
+msgstr "Configuration PDV"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Please provide feedback"
+msgstr "Fournir un feedback"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model,name:kzm_pos_customer_display.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model,name:kzm_pos_customer_display.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,field_description:kzm_pos_customer_display.field_pos_config__set_customer
+msgid "Select/Create Customer"
+msgstr "Sélectionner/Créer client"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,help:kzm_pos_customer_display.field_pos_config__enable_customer_rating
+msgid "Show the customer display rating"
+msgstr "Activer les notes d'affichages clients"
+
+#. module: kzm_pos_customer_display
+#: model:ir.model,name:kzm_pos_customer_display.model_customer_display
+msgid "Store Data Which Used to Display in Customer Screen."
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#: model:ir.model.fields,help:kzm_pos_customer_display.field_pos_config__image_interval
+msgid "The duration of the image in the screen"
+msgstr "La durée d'affichage de l'image"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Total:"
+msgstr ""
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Unknown"
+msgstr "Indéfini"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/js/pos.js:0
+#, python-format
+msgid "You will lose any data associated with the current order"
+msgstr "Vous perdrez toutes les données associées à la commande suivante"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/xml/customer_display.xml:0
+#, python-format
+msgid "Your shopping cart is empty"
+msgstr "Votre panier est vide"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/js/pos.js:0
+#, python-format
+msgid "fixed"
+msgstr "fixé"
+
+#. module: kzm_pos_customer_display
+#. openerp-web
+#: code:addons/kzm_pos_customer_display/static/src/js/pos.js:0
+#, python-format
+msgid "percentage"
+msgstr "pourcentage"

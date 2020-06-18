@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates id="template" xml:space="preserve">
+
+	<t t-name="SeeAllOrdersButtonWidget" name="See All Orders Button Widget">
+		<div class="control-button button confirm" id="create_sales_order" style="background-color: #7f82ac; color: #fff;font-size: 14px;">
+		   <i class="fa fa-university"></i> Orders
+		</div>
+	 </t>
+
+	<!-- SeeAllOrdersScreenWidget -->
+	<t t-name="SeeAllOrdersScreenWidget">
+		<div class="clientlist-screen screen">
+			<div class="screen-content">
+				<section class="top-content">
+					<span class='button back'>
+						<i class='fa fa-angle-double-left'></i>
+						Cancel
+					</span>
+					<span class='searchbox search-order'>
+						<input placeholder='Search Orders' />
+						<span class='search-clear'></span>
+					</span>
+					<span class='searchbox'></span>
+				</section>
+				<section class="full-content">
+					<div class='window touch-scrollable scrollable-y'>
+						<section class='subwindow collapsed'>
+							<div class='subwindow-container'>
+								<div class='subwindow-container-fix client-details-contents'>
+								</div>
+							</div>
+						</section>
+						<section class='subwindow'>
+							<div class='subwindow-container'>
+								<div class='subwindow-container-fix touch-scrollable scrollable-y'>
+									<table class='client-list'>
+										<thead>
+											<tr style="background-color: #7f82ac; color: #fff;">
+												<th>Order Ref</th>
+												<th>Receipt Ref</th>
+												<th>Customer</th>
+												<th>Order Date</th>
+												<th>Total</th>
+												<th>Return Order</th>
+												<th class="hidden">Receipt Reprint</th>
+
+											</tr>
+										</thead>
+										<tbody class='orders-list-contents'>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</t>
+
+	<!-- OrdersLine -->
+	<t t-name="OrdersLine">
+		<tr>
+			<td class='orders-line-name' t-att-data-id='order.id' style="cursor: pointer;"><t t-esc='order.name' /></td>
+			<td class='orders-line-ref' t-att-data-id='order.id' style="cursor: pointer;"><t t-esc='order.pos_reference' /></td>
+			<td class='orders-line-partner' t-att-data-id='order.id' style="cursor: pointer;"><t t-esc='order.partner_id[1] or ""' /></td>
+			<td class='orders-line-date' t-att-data-id='order.id' style="cursor: pointer;"><t t-esc='order.date_order' /></td>
+			<td class='orders-line-tot' t-att-data-id='order.id' style="cursor: pointer;"><t t-esc='widget.format_currency(order.amount_total)' /></td>
+			<td>
+				<button class="return-order" t-att-id='order.id' style="cursor: pointer; color: #fff; background-color: #7F82AC;"><i class='fa fa-sign-in'></i> Return Order </button>
+			</td>
+			<td>
+				<button class="print-order" t-att-id='order.id' style="cursor: pointer;color: #fff;padding-top: 8px;margin-top: 10px;padding-bottom: 11px;background-color: #7F82AC;"><i class="fa fa-print"></i> Print</button>
+			</td>
+		</tr>
+	</t>
+
+</templates>

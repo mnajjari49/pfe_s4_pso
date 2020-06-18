@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="reports_pos_config_view_form" model="ir.ui.view">
+        <field name="name">pos.config.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="kzm_pos_config.kzm_pos_config_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='kzm_pos_config']" position='inside'>
+<!--                <h2>Dashboard an Reports</h2>-->
+                                    <div class="col-xs-12 col-md-6 o_setting_box" id="expire_deshboard">
+                        <div class="o_setting_left_pane">
+                            <field name="product_expiry_report"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="product_expiry_report" string="Expiry Dashboard"/>
+                            <div class="text-muted">
+                                Products Expiry Dashboard
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="pos_dashboard">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_dashboard"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_dashboard" string="Dashboard"/>
+                            <div class="text-muted">
+                                Sales Dashboard
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="pos_graph">
+                        <div class="o_setting_left_pane">
+                            <field name="pos_graph"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_graph"/>
+                            <div class="text-muted" id="pos_graph">
+                                POS Graph allow filter data graph wise
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible' : [('pos_graph', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Current Session Report" for="current_session_report"
+                                           class="col-md-3 o_light_label" style="width: 170px;"/>
+                                    <field name="current_session_report"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="x_report">
+                        <div class="o_setting_left_pane">
+                            <field name="x_report"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="x_report"/>
+                            <div class="text-muted" id="x_report">
+                                X-Report allow print mid-day report
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="print_z_report">
+                        <div class="o_setting_left_pane">
+                            <field name="z_report"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="z_report" string="Z Report"/>
+                            <div class="text-muted">
+                                Automatically print Z report when user can close session from POS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="today_sale_report">
+                        <div class="o_setting_left_pane">
+                            <field name="today_sale_report"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="today_sale_report"/>
+                            <div class="text-muted" id="today_sale_report">
+                                Allow user to show active sessions report
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="audit_report">
+                        <div class="o_setting_left_pane">
+                            <field name="print_audit_report"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="print_audit_report" string="Print Audit Report"/>
+                            <div class="text-muted">
+                                Print Audit Report
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="print_product_summary">
+                        <div class="o_setting_left_pane">
+                            <field name="print_product_summary"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="print_product_summary" string="Product Summary"/>
+                            <div class="text-muted" id="print_product_summary">
+                                product Summary
+                            </div>
+                            <div class="content-group mt16"
+                                 attrs="{'invisible' : [('print_product_summary', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Current Month Date" for="product_summary_month_date"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="product_summary_month_date"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Signature" for="signature" class="col-md-3 o_light_label"/>
+                                    <field name="signature"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label string="No. of Copy Receipt" for="no_of_copy_receipt"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="no_of_copy_receipt"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="payment_summary">
+                        <div class="o_setting_left_pane">
+                            <field name="payment_summary"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="payment_summary" string="Payment Summary"/>
+                            <div class="text-muted">
+                                Payment Summary
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible' : [('payment_summary', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Current Month Date" for="current_month_date"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="current_month_date"
+                                           attrs="{'invisible' : [('payment_summary', '=', False)]}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="enable_order_summary">
+                        <div class="o_setting_left_pane">
+                            <field name="enable_order_summary"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enable_order_summary" string="Order Summary"/>
+                            <div class="text-muted" id="enable_order_summary">
+                                Order Summary
+                            </div>
+                            <div class="content-group mt16"
+                                 attrs="{'invisible' : [('enable_order_summary', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Current Month Date" for="order_summary_current_month"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="order_summary_current_month"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Signature" for="order_summary_signature"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="order_summary_signature"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label string="No. of Copy Receipt" for="order_summary_no_of_copies"
+                                           class="col-md-3 o_light_label"/>
+                                    <field name="order_summary_no_of_copies"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

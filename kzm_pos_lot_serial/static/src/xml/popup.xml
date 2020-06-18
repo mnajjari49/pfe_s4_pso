@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates id="template" xml:space="preserve">
+
+
+    <t t-extend="PackLotLinePopupWidget">
+        <t t-jquery="div.modal-dialog" t-operation="replace">
+            <t t-if="widget.pos.config.enable_pos_serial">
+                <div class="modal-dialog">
+                    <div class="popup popup-text serial_qty_search">
+                        <p class="title">
+                            <t t-esc=" widget.options.title || '' "/>
+                        </p>
+                        <t t-if="widget.options.serials and widget.options.serials.length > 0">
+                            <table style="margin-top: 14px;">
+                                <td>
+                                    <input style="border-radius: 20px;"
+                                           class="popup-search text-center" type="text" placeholder="Search Lot/Serial"/>
+                                </td>
+                            </table>
+                        </t>
+                        <t t-if="widget.options.serials and widget.options.serials.length > 0">
+                            <div class="pos_lot_serial_line">
+                                <table style="width: 443px;" id="lot_list">
+                                    <thead>
+                                        <tr style="border-bottom: 1px solid #555555;">
+                                            <th align="left">Serial</th>
+                                            <th align="center">Qty</th>
+                                            <th align="center" colspan="2">Add Qty</th>
+                                            <th align="center">Life Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class='serial-list-contents'></tbody>
+                                </table>
+                                <!--<div id="pagination" class="lot_page"><div><button class="btn btn-danger" id="first"><i class="fa fa-angle-double-left fa-lg"></i></button></div><div><button class="btn btn-danger" id="previous"></button></div><div><span class="text" id="text"></span></div><div><button class="btn btn-danger" id="next"></button></div><div><button class="btn btn-danger" id="last"><i class="fa fa-angle-double-right fa-lg"></i></button></div></div>-->
+                            </div>
+                        </t>
+                        <div class='packlot-lines' style="height:400px">
+                            <t t-if="widget.options.pack_lot_lines">
+                                <t t-set="focus_lot_line"
+                                   t-value="widget.focus_model || widget.options.pack_lot_lines.get_empty_model()"/>
+                                <t t-foreach='widget.options.pack_lot_lines.models'
+                                   t-as='lot_line'>
+                                    <input type="text" t-att-cid="lot_line.cid"
+                                           t-att-value="lot_line.get('lot_name')"
+                                           t-att-autofocus="lot_line === focus_lot_line ? 'autofocus': undefined"
+                                           class="popup-input packlot-line-input" placeholder="Serial/Lot Number"
+                                           style="width: 70%;"/>
+                                    <i
+                                            class="oe_link_icon remove-lot fa fa-trash-o" style="color: red;"></i>
+                                </t>
+                            </t>
+                        </div>
+                        <div class="footer">
+                            <div class="button confirm">
+                                Ok
+                            </div>
+                            <div class="button cancel">
+                                Remove All
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-if="!widget.pos.config.enable_pos_serial">
+                <div class="modal-dialog">
+                    <div class="popup popup-text">
+                        <p class="title">
+                            <t t-esc=" widget.options.title || '' "/>
+                        </p>
+                        <div class='packlot-lines'>
+                            <t t-if="widget.options.pack_lot_lines">
+                                <t t-set="focus_lot_line"
+                                   t-value="widget.focus_model || widget.options.pack_lot_lines.get_empty_model()"/>
+                                <t
+                                        t-foreach='widget.options.pack_lot_lines.models' t-as='lot_line'>
+                                    <input type="text" t-att-cid="lot_line.cid"
+                                           t-att-value="lot_line.get('lot_name')"
+                                           t-att-autofocus="lot_line === focus_lot_line ? 'autofocus': undefined"
+                                           class="popup-input packlot-line-input" placeholder="Serial/Lot Number"/>
+                                    <i
+                                            class="oe_link_icon remove-lot fa fa-trash-o"></i>
+                                </t>
+                            </t>
+                        </div>
+                        <div class="footer">
+                            <div class="button confirm">
+                                Ok
+                            </div>
+                            <div class="button cancel">
+                                Cancel
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </t>
+    <t t-name="listLine">
+        <t t-if="serial.life_date">
+            <t t-if="moment(serial.check_expire_alert).isAfter(serial.check_serial_life) || moment(serial.check_expire_alert).isSame(serial.check_serial_life)">
+                <tr t-att-data="serial.name"
+                    style="height: 30px;font-weight: normal;background: lightgray;" class="select-lot">
+
+                    <td align="left">
+                        0<t t-esc="serial.name"/>
+                    </td>
+                    <td>
+                        <t t-esc="serial.remaining_qty"/>
+                    </td>
+                    <td>
+                        <input
+                                style="padding:0px;font-size: 16px;height: 30px;min-height: 0px;width: 48px;text-align: center"
+                                t-att-id="serial.id" value="1" disabled="disabled"/>
+                    </td>
+                    <td style="font-size: 30px;padding-left: 10px;">
+                        <i class="fa fa-info-circle" aria-hidden="true"
+                           style="color: #6ec89b;"
+                           t-att-title="'Product will expired on ' + moment(serial.life_date).format('YYYY-MM-DD')"></i>
+                    </td>
+                    <td>
+                          <t t-esc="moment(serial.life_date).format('YYYY-MM-DD')"/>
+                    </td>
+                </tr>
+            </t>
+            <t t-if="!(moment(serial.check_expire_alert).isAfter(serial.check_serial_life) || moment(serial.check_expire_alert).isSame(serial.check_serial_life))">
+                <tr t-att-data="serial.name" style="height: 30px;font-weight: normal;"
+                    class="select-lot">
+
+                    <td align="left">
+                        1<t t-esc="serial.name"/>
+                    </td>
+                    <td>
+                        <t t-esc="serial.remaining_qty"/>
+                    </td>
+                    <td>
+                        <input
+                                style="padding:0px;font-size: 16px;height: 30px;min-height: 0px;width: 48px;text-align: center"
+                                t-att-id="serial.id" value="1"/>
+                    </td>
+                    <td style="font-size: 30px;padding-left: 10px;">
+                        <i style="cursor: pointer;color: #6EC89B;"
+                           t-att-data="serial.name" class="fa fa-plus-square" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <t t-if="moment(serial.life_date).format('YYYY-MM-DD')">
+                            <t t-esc="moment(serial.life_date).format('YYYY-MM-DD')"/>
+                        </t>
+                    </td>
+                </tr>
+            </t>
+        </t>
+        <t t-if="!serial.life_date">
+            <tr t-att-data="serial.name" style="height: 30px;font-weight: normal;" class="select-lot">
+                <td align="left">
+                    <t t-esc="serial.name"/>
+                </td>
+                <td>
+                    <t t-esc="serial.remaining_qty"/>
+                </td>
+                <td>
+                    <input
+                            style="padding:0px;font-size: 16px;height: 30px;min-height: 0px;width: 48px;text-align: center"
+                            t-att-id="serial.id" value="1"/>
+                </td>
+                <td style="font-size: 30px;padding-left: 10px;">
+                    <i style="cursor: pointer;color: #6EC89B;"
+                       t-att-data="serial.name" class="fa fa-plus-square" aria-hidden="true"></i>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </t>
+    </t>
+
+
+</templates>

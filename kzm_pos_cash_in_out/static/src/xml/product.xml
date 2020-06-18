@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery="div.lsc" t-operation="append">
+            <t t-if="widget.pos.config.money_in_out">
+                        <div id="money_in" title="Put Money In" class="btn_icon_set">
+                            <img src="/kzm_pos_cash_in_out/static/src/img/icons/put_money.png"/>
+                            <span class="btn_span_set">Money In</span>
+                        </div>
+                <div id="money_out" title="Take Money Out" class="btn_icon_set">
+                            <img src="/kzm_pos_cash_in_out/static/src/img/icons/take_money.png"/>
+                    <span class="btn_span_set"> Money Out</span>
+                        </div>
+                    </t>
+        </t>
+    </t>
+
+</templates>
+

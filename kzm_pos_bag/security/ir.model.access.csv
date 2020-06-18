@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kzm_pos_bag_kzm_pos_bag,kzm_pos_bag.kzm_pos_bag,model_kzm_pos_bag_kzm_pos_bag,,1,1,1,1

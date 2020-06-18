@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="MoneyInOutTicket">
+        <div class="pos-sale-ticket">
+            <div class="pos-center-align">
+               <t t-esc="moment().format('LL')"/>
+           </div>
+            <div class="pos-center-align"></div>
+            <t t-if="widget.pos.config.receipt_header">
+                <div style='text-align:center'>
+                    <t t-esc="widget.pos.config.receipt_header" />
+                </div>
+                <br />
+            </t>
+            <br />
+            <t t-esc="widget.pos.company.name"/><br />
+            Time: <t t-esc="moment().format('L LT') || ''"/><br />
+            Phone: <t t-esc="widget.pos.company.phone || ''"/><br />
+            Cashier: <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/><br />
+            Operation: <t t-esc="money_data.operation"/><br />
+            Purpose: <t t-esc="money_data.reason"/><br />
+            Amount: <t t-esc="widget.format_currency(money_data.amount)"/><br />
+            <br /><br /><br /><br /><br /><br />
+            <div style="text-align: center;">---------------------------------</div>
+            <div style="text-align: center;">Signature</div><br /><br /><br />
+            <t t-if="widget.pos.config.receipt_footer">
+                <br />
+                <div style='text-align:center'>
+                    <t t-esc="widget.pos.config.receipt_footer" />
+                </div>
+            </t>
+        </div>
+    </t>
+
+	<t t-name="CashOperationPopup">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput cash_operation_popup">
+                <p class="title title_in_out">
+                    <t t-esc="widget.options.title"/>
+                </p>
+                <div class="money_in_out_css">
+                    <t t-esc="widget.options.msg"/>
+                </div>
+                <div class='container'>
+                    <table>
+                        <tr>
+                            <td>Reason</td>
+                            <td>
+                                <input type='text' class='reason'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td>
+                                <input type='text' class='amount'/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        OK
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <!--     Cash In Out Statement Popup -->
+    <t t-name="PrintCashInOutStatmentPopup">
+        <div class="modal-dialog">
+            <div class="popup popup-print-statement in_out_popup" style="height: 301px;">
+                <div class='title cash_statement_title' style="height: 23px;">
+                    <p style="margin-top: 0px;">Print Money In-Out Statement</p>
+                </div>
+                <div class="in-out-statment"
+                     style="display: inline-table;margin: 0px 5px; text-align: left;">
+                    <table style="margin-top: 10px;">
+                        <tbody
+                                style="padding: 4px 10px;font-size: 16px;float: left;">
+                            <tr>
+                                <td style="text-align: left;">Cashier</td>
+                                <td
+                                        style="text-align: right;float: left;
+                                    margin: 1px 19px;padding: 2px 2px;">
+                                    <select id="user-id"
+                                            style="height: 30px;width: 147px;background: transparent;padding: 0px 10px;">
+                                        <option></option>
+                                        <t t-foreach="widget.pos.users"
+                                           t-as="user">
+                                            <option t-att-value="user.id">
+                                                <t t-esc="user.name"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Start Date</td>
+                                <td class="display-date start-date"
+                                    style="text-align: right; padding: 0px 10px;">
+                                    <input class="insert-date"
+                                           type="date"
+                                           style="margin-bottom: 15px;height: 31px;font-size: 16px;padding: 0px 10px;"></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">End Date</td>
+                                <td
+                                        style="text-align: right;padding: 1px 10px;" class="end-date">
+                                    <input type="date"
+                                           style="height: 31px;font-size: 16px; padding: 0px 10px;"
+                                           class="insert-date"></input>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Print
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+
+</templates>

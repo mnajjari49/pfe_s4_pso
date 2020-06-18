@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery="div.lsc" t-operation="append">
+            <t t-if="widget.pos.config.enable_pos_return">
+                         <div id="order_return" class="btn_icon_set">
+                            <img src="/kzm_pos_product_return/static/src/img/icons/order_return.png"/>
+                             <span class="btn_span_set">Item Return</span>
+                         </div>
+            </t>
+        </t>
+    </t>
+
+</templates>
+

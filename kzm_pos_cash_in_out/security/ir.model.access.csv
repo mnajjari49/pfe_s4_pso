@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_cashcontrol,access_custom_cashcontrol,model_custom_cashcontrol,,1,1,1,1
+access_cash_in_out_history,access_cash_in_out_history,model_cash_in_out_history,,1,1,1,1

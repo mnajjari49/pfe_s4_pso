@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="res_users_view_form" model="ir.ui.view">
+            <field name="name">res.users.form.view</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="kzm_pos_config.res_users_view_form"/>
+            <field name="arch" type="xml">
+
+               <xpath expr="//page[@name='kzm_pos']" position="inside">
+                   <group  col="4" string="Login configurations">
+                        <field name="based_on"/>
+                        <field name="pos_security_pin" password="True"/>
+                        <field name = "login_with_pos_screen"/>
+                        <field name = "default_pos"
+                           attrs="{'invisible': [('login_with_pos_screen', '=', False)],
+                                   'required': [('login_with_pos_screen', '=', True)]}"/>
+                   </group>
+                </xpath>
+
+
+
+            </field>
+        </record>
+</odoo>

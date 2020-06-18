@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_pos_login
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-04 11:02+0000\n"
+"PO-Revision-Date: 2020-06-04 12:13+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid " order has been created."
+msgstr "une commande a été créee"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid " order has been paid."
+msgstr "une commande a été payée"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid ""
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+msgstr ""
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,help:kzm_pos_login.field_res_users__pos_security_pin
+msgid ""
+"A Security PIN used to protect sensible functionality in the Point of Sale"
+msgstr ""
+"Un code PIN de sécurité utilisé pour protéger les fonctionnalités "
+"sensibles du point de vente"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "ABC"
+msgstr ""
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "Active sessions not found!"
+msgstr "Aucune session active trouvée"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_res_users__based_on
+msgid "Authentication Based On"
+msgstr "Authentification basée sur"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields.selection,name:kzm_pos_login.selection__res_users__based_on__barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "Caps"
+msgstr ""
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_pos_session__current_cashier_id
+msgid "Cashier"
+msgstr "Caissier"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,help:kzm_pos_login.field_res_users__based_on
+msgid "Define the method for the login"
+msgstr "Définissez une méthode de connexion"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "Delivery Orders"
+msgstr "Bons de livraisons"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "Destroy Current Order ?"
+msgstr "Supprimer la commande courante"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__display_name
+msgid "Display Name"
+msgstr "Afficher Nom"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "Enter PIN"
+msgstr "Entrer le PIN"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "Enter Username"
+msgstr "Saisir votre login"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__id
+msgid "ID"
+msgstr ""
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/gui.js:0
+#, python-format
+msgid "Incorrect Password"
+msgstr "Mot de passe incorrect"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/screens.js:0
+#, python-format
+msgid "Invalid Username or Pin!!!"
+msgstr "PIN ou Login incorrects !!!"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_pos_session__is_lock_screen
+msgid "Lock Screen"
+msgstr "Vérouiller écran"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__lock_status
+msgid "Lock State"
+msgstr "État de vérouillage"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_pos_session__locked
+msgid "Locked"
+msgstr "Vérouillé"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_pos_session__locked_by_user_id
+msgid "Locked By"
+msgstr "Vérouillé par"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__locked_by_user_id
+msgid "Locked By User"
+msgstr "Vérouillé par l'utilisateur"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__locked_user_id
+msgid "Locked User"
+msgstr "Vérouillé utilisateur"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "Login"
+msgstr ""
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_res_users__login_with_pos_screen
+msgid "Login with Direct POS"
+msgstr "Se connecter avec Direct POS"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "Message"
+msgstr ""
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "No order to print."
+msgstr "Nombre de commande à imprimer"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "Orders"
+msgstr "Commandes"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_res_users__default_pos
+msgid "POS Config"
+msgstr "Configuration du PDV"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_res_users__pos_security_pin
+msgid "POS Security Pin"
+msgstr "PIN de sécurité PDV"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/gui.js:0
+#, python-format
+msgid "Password ?"
+msgstr "Mot de passe?"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields.selection,name:kzm_pos_login.selection__res_users__based_on__pin
+msgid "Pin"
+msgstr ""
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/screens.js:0
+#, python-format
+msgid "Please enter username and password"
+msgstr "Entrer le l'identifiant et le mot de passe"
+
+#. module: kzm_pos_login
+#: model:ir.model,name:kzm_pos_login.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Session du point de vente"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/xml/login.xml:0
+#, python-format
+msgid "Scan RFID"
+msgstr "Scanner le RFID"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,help:kzm_pos_login.field_res_users__default_pos
+msgid "Select the default POS you want login with"
+msgstr "Sélectionner le PDV au quel vous voulez vous connectez par défaut"
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_lock_data__session_id
+msgid "Session"
+msgstr ""
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,field_description:kzm_pos_login.field_pos_session__shop_id
+msgid "Shop"
+msgstr ""
+
+#. module: kzm_pos_login
+#: model:ir.model.fields,help:kzm_pos_login.field_res_users__login_with_pos_screen
+msgid "Use POS Screen for login"
+msgstr "Utiliser l'écran du PDV pour connexion"
+
+#. module: kzm_pos_login
+#: model:ir.model,name:kzm_pos_login.model_lock_data
+msgid "Used to Store Multi-Terminal Lock Data."
+msgstr "Utiliser pour sauvegarder les données de Vérouillages"
+
+#. module: kzm_pos_login
+#: model:ir.model,name:kzm_pos_login.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid ""
+"You can not proceed with 'Manage only 1 Warehouse with only 1 stock "
+"location' from inventory configuration."
+msgstr ""
+"Vous ne pouvez pas continuer avec «Gérer seulement 1 entrepôt avec "
+"seulement 1 emplacement de stock» dans la configuration de l'inventaire."
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "You can not proceed with empty cart."
+msgstr "Vous ne pouvez pas continuer avec un panier vide"
+
+#. module: kzm_pos_login
+#. openerp-web
+#: code:addons/kzm_pos_login/static/src/js/chrome.js:0
+#, python-format
+msgid "You will lose any data associated with the current order"
+msgstr "Vous perdrez toutes les données associées à la commande en cours"

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="POSSessionConfig">
+        <div class="modal-dialog">
+            <div class="popup pos_close_popup">
+                <div class="pos-close-container"
+                     style="text-align: left;color: #fff;font-size: 16px;">
+                    <div class="close-popup-btn">
+                        <i class="fa fa-times" aria-hidden="true"
+                           style="margin-left: 1px;font-size: 20px;"></i>
+                    </div>
+                    <div class="lock-section">
+                        <h3
+                                style="border-bottom: 1px solid;width: 265px;padding: 12px;">
+                            Already leaving?
+                        </h3>
+                         <div>
+                            Goodbye, <t t-esc="widget.pos.get_cashier().name"/>.
+                        </div>
+                        <div class="close-pos-btn">
+                            <!-- <span class="close-pos"><i class="fa fa-sign-out"></i><div class="title-name-hover">
+                                   Close POS
+                               </div></span> -->
+                            <span class="close-normal">
+                                <i class="fa fa-sign-out"></i>
+
+                                <div class="title-name-hover">
+                                   Close POS
+                               </div>
+                            </span>
+
+                           <t t-if="widget.pos.enable_order">
+                               <span class="close-pos-session" >
+                                <i class="fa fa-times-circle"></i>
+                                <div class="title-name-hover">
+                                    Close Session
+                               </div>
+                            </span>
+                           </t>
+                            <t t-else="">
+                               <span class="close-pos-session" >
+                                <i class="fa fa-times-circle"></i>
+                                <div class="title-name-hover">
+
+                                    Close Session
+                               </div>
+                            </span>
+                           </t>
+                            <span class="logout-pos">
+                                <i class="fa fa-power-off"
+                                   aria-hidden="true"></i>
+                                <div class="title-name-hover">
+                                   Logout
+                               </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="CashControlWizardPopup">
+        <div class="modal-dialog">
+            <div class="popup popup-cashcontrol-structure" style="height: 100%;width: 50%;">
+                <p class="title">
+                    <t t-esc="widget.title"/>
+                </p>
+                <div style="max-height: 250px !important;overflow: auto;">
+                    <table id="cashbox_data_table">
+                        <thead>
+                            <tr>
+                                <th>Coin/Bill Value</th>
+                                <th>Number of Coins/Bills</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div id="add_close_balance" style="width:100%;">
+                        <div style="position: fixed;top: 55%;float:left">
+                            <button id="add_new_item">Add New Item</button>
+                        </div>
+                        <div
+                                style="position: fixed;top: 53%;float:right;margin-left:30%;">
+                            <h5>Subtotal :
+                                <span class="subtotal_end"
+                                      style="margin-left: 10px;"></span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div id="cash_details" style="position:fixed; top:50%;width:50%;">
+                    <table width="100%">
+                        <tr align="right">
+                            <td width="30%">
+                                <label>Opening Balance: </label>
+                            </td>
+                            <td width="20%">
+                                <span id="open_bal">0.00</span>
+                            </td>
+                            <td width="30%">
+                                <label>Real Closing Balance: </label>
+                            </td>
+                            <td width="20%">
+                                <span id="real_close_bal">0.00</span>
+                            </td>
+                        </tr>
+                        <tr align="right">
+                            <td width="30%">
+                                <label>+ Transactions: </label>
+                            </td>
+                            <td width="20%">
+                                <span id="transaction">0.00</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr align="right">
+                            <td width="30%">
+                                <label>= Theoretical Closing Balance: </label>
+                            </td>
+                            <td width="20%">
+                                <span id="theo_close_bal">0.00</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="border-top: 2px solid ! important;"
+                            align="right">
+                            <td></td>
+                            <td></td>
+                            <td width="30%">
+                                <label>Difference: </label>
+                            </td>
+                            <td width="20%">
+                                <span id="differ">0.00</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div class="footer" style="">
+                    <div class="button close_session" style="width: 130px;">
+                        Close Session
+                    </div>
+                    <div class="button ok">
+                        Validate
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

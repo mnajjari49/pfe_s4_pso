@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:-->
+<odoo>
+    <data>
+        <template id="index" name="templates index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+
+                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/pos.js"></script>
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/customer_display.js"></script>-->
+
+<!--                                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/variant_screen.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/pos_theme.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/category_slider.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/multi_terminal_lock.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/pos.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/order_screen.css"/>-->
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_customer_display/static/src/css/datepicker.css"/>
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/login.css"/>-->
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_customer_display/static/src/css/client_screen.css"/>
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/doctor_screen.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/products.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/simple-sidebar.css"/>-->
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_customer_display/static/src/css/jquery.timepicker.css"/>
+                <!-- <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/jquery-ui.css"/> -->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/graph_screen.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/gift_card_screen.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/stock_picking_screen.css"/>-->
+<!--                <link rel="stylesheet" type="text/css" href="/flexipharmacy_ee/static/src/css/sale_order_screen.css"/>-->
+                <link rel="stylesheet" type="text/css" href="/kzm_pos_customer_display/static/src/css/jquery.datetimepicker.css"/>
+
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/lib/jquery-barcode.js"></script>-->
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/lib/markerclusterer.js"></script>-->
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/auto_complete_address.js"></script>-->
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/lib/jquery.timepicker.js"></script>-->
+                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/canvasjs.min.js"></script>
+<!--                <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/lib/jquery.datetimepicker.full.min.js"></script>-->
+
+            </xpath>
+        </template>
+
+        <template id="customer_screen_assets" name="pos_customer_screen assets">
+            <t t-call="web.assets_backend"/>
+            <script type="text/javascript" src="/kzm_pos_customer_display/static/src/js/customer_display.js"></script>
+            <link rel="stylesheet" type="text/css" href="/kzm_pos_customer_display/static/src/css/customer.css"/>
+            <link rel="stylesheet" type="text/css" href="/web/static/lib/fontawesome/css/font-awesome.css"/>
+        </template>
+
+
+
+    </data>
+</odoo>

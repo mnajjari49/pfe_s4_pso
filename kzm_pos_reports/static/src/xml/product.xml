@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="Chrome">
+        <t t-jquery="div.pos-branding" t-operation="replace">
+            <div class="pos-branding">
+                <span class="placeholder-SliderWidget"></span>
+            </div>
+        </t>
+    </t>
+    <t t-name="SliderWidget">
+        <div id="menu-slider" style="width: 37px;position: absolute;">
+            <div id="mysidebar">
+                <div id="wrapper" class="toggled">
+                   <div id="sidebar-wrapper" class="sidebar_color">
+                       <ul class="sidebar-nav">
+                           <ul class="main_slider-ul">
+                               <li class="main-header-li">
+                                   <a href="#">
+                                       <img id="toggle_image" class="right"
+                                            src="/kzm_pos_reports/static/src/img/angle-right.png"
+                                            style="width: 23px;position: relative;top: 6px;"/>
+                                       Reports
+                                   </a>
+                               </li>
+                               <ul class="content-list-ul" style="cursor: pointer;">
+                                   <t t-if="widget.pos.config.pos_graph">
+                                       <li class="report-li pos-graph">Graph</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.x_report">
+                                       <li class="x-report">X-Report</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.today_sale_report">
+                                       <li class="today_sale_report">Today Sale Report</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.payment_summary">
+                                        <li class="payment_summary_report">Payment Summary</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.print_product_summary">
+                                        <li class="product_summary_report">Product Summary</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.enable_order_summary">
+                                        <li class="order_summary_report">Order Summary</li>
+                                   </t>
+
+                                   <t t-if="widget.pos.config.print_audit_report">
+                                       <li class="print_audit_report">Session Inventory Audit</li>
+                                   </t>
+                               </ul>
+                           </ul>
+                           <ul class="main_slider-ul">
+                               <li class="main-header-li">
+                                   <a href="#">
+                                       <img id="toggle_image_dashboard" class="right"
+                                            src="/kzm_pos_reports/static/src/img/angle-right.png"
+                                            style="width: 23px;position: relative;top: 6px;"/>
+                                       Dashboard
+                                   </a>
+                               </li>
+                               <ul class="content-list-ul" style="cursor: pointer;">
+                                   <t t-if="widget.pos.config.pos_dashboard">
+                                       <li class="report-li sales_deshboard">Sales Dashboard</li>
+                                   </t>
+                                   <t t-if="widget.pos.config.product_expiry_report">
+                                       <li class="report-li expiry_deshboard">Expiry Dashboard</li>
+                                   </t>
+                               </ul>
+                           </ul>
+
+                       </ul>
+                   </div>
+                    <div id="slidemenubtn">
+                        <a id="menu-toggle" align="center">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="GraphScreenWidget">
+        <div class="graph-screen screen">
+            <div class="screen-content" style="max-width:1254px !important;">
+                <section class="top-content">
+                    <span class='button back'>
+                        <i class='fa fa-angle-double-left'></i>
+                        Cancel
+                    </span>
+                    <span class='button bar_chart selected_chart' id="bar_chart">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        Bar Chart
+                    </span>
+                    <span class='button pie_chart' id="pie_chart">
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        Pie Chart
+                    </span>
+                    <span id="selection">
+                        <select id="duration_selection">
+                            <option value="nofilter"></option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                        </select>
+                    </span>
+                    <span id="selection">
+                        <select id="limit_selection">
+                            <option value="ALL" selected="selected">All</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </span>
+                    <span>
+                        <input type="text" placeholder="Start Date" class="input-textbox" id="start_date"
+                               readonly="readonly"/>
+                        <input type="text" placeholder="End Date" class="input-textbox" id="end_date"
+                               readonly="readonly"/>
+                    </span>
+                </section>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div id="container">
+                    <div id="left"><br/>
+                        <div id="divMenu">
+                            <ul>
+                                <li><a href="#" class="top_customer menu_selected" id="top_customer">Top Customers</a></li>
+                                <li><a href="#" class="top_products" id="top_products">Top Products</a></li>
+                                <li><a href="#" class="top_category" id="top_category">Top Category</a></li>
+                                <li><a href="#" class="cashiers" id="cashiers">Cashiers</a></li>
+                                <li><a href="#" class="sales_by_location" id="sales_by_location">Sales By Location</a></li>
+                                <li><a href="#" class="income_by_journals" id="income_by_journals">Income By Journals</a></li>
+                                <li><a href="#" class="pos_benifit" id="pos_benifit">Profit/Loss</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div id="chart" style="margin-top:16px;width: 100%;height: 400px;">
+                            <div id="chartContainer" style="overflow:auto;max-width:100%;height:450px;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ProductExpiryDeshboardWidget">
+        <div class="graph-screen screen" style="background: #ffff;">
+            <div class="screen-content" style="max-width: 1254px !important;">
+                <div class="top-screen-container">
+                    <section class="top-content" style="height:55px;top:-10px;">
+                        <span class='button back'>
+                            <i class='fa fa-angle-double-left'></i>
+                            Back
+                        </span>
+                    </section>
+                </div>
+                <div class="main-screen-container">
+                    <div class="report-header">
+                        <div class="user-welcome-message">
+                            <br/>
+                            <span style="margin:20px;">
+                                Hello,
+                            </span>
+                            <br/>
+                            <span style="margin:20px;" id="login_user_expire_screen">
+                                Admin
+                            </span>
+                        </div>
+                        <div class="summary-expiry-product" stlye="color:#68C2BD">
+                            <br/>
+                            <div align="center" style="margin-top=30px;">
+                                <span>
+                                    Today Nearly Expire Product
+                                </span>
+                            </div>
+                            <br/>
+                            <div align="center">
+                                <span id="near_expired" style="cursor: pointer;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expired-by-product-container">
+                        <div class="expired-by-product-title">
+                            <div style="margin: 0px;">
+                                <span style="font-size: 20px;padding: 5px;">
+                                    Nearly Expire By Product
+                                </span>
+                            </div>
+                        </div>
+                        <div class="expired-by-product-list">
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#FFFDB9;" t-att-data-id="60">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="60days">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 10px;">
+                                            <br/>
+                                            <br/>
+                                            <span style="font-size: 15px;">
+                                                Expire In 60 Days
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#F0C4D7;" t-att-data-id="30">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="30days">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 35px;">
+                                            <span style="font-size: 15px;">
+                                                Expire In 30 Days
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#D5FEB9;" t-att-data-id="15">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="15days">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 35px;">
+                                            <span style="font-size: 15px;">
+                                                Expire In 15 Days
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#D5FEB9;" t-att-data-id="10">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="10days">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 35px;">
+                                            <span style="font-size: 15px;">
+                                                Expire In 10 Days
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#CCFFFF;" t-att-data-id="5">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="5days">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 35px;">
+                                            <span style="font-size: 15px;">
+                                                Expire In 5 Days
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expired-detail-container">
+                                <div class="expired-detail-details">
+                                    <div class="expired-product-count" style="background:#FFFDB9;" t-att-data-id="1">
+                                        <br/>
+                                        <br/>
+                                        <span class="count-text" id="1day">
+                                        </span>
+                                    </div>
+                                    <div class="day-in-expiry">
+                                        <div align="center" style="margin-top: 35px;">
+                                            <span style="font-size: 15px;">
+                                                Expire In Tomorrow
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expired-by-product-footer">
+                            <div style="margin: 5px;color: blue;">
+                                <span id="explorable_div" class="hidden"
+                                      style="font-size: 13px;padding: 15px;cursor: pointer;">
+                                    <span id="explorer_text"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Graphical-report-container">
+                        <div class="date-filter">
+                            <span>
+                                <input type="text" placeholder="Start Date" class="input-textbox"
+                                       id="start_date_expire_deshboard"/>
+                                <input type="text" placeholder="End Date" class="input-textbox"
+                                       id="end_date_expire_deshboard"/>
+                            </span>
+                            <span class='custom_button button bar_chart selected_chart' id="bar_chart_expire_dashboard">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                Bar Chart
+                            </span>
+                            <span class='custom_button button pie_chart' id="pie_chart_expire_dashboard">
+                                <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                                Pie Chart
+                            </span>
+                        </div>
+                        <div class="chart-view-container">
+                            <div id="container">
+                                <div style="width: 100%;height:auto;position: relative;">
+                                    <div id="chart" style="margin-top:16px;width: 100%;height: 400px;">
+                                        <div id="chartContainer_expiry_dashboard"
+                                             style="overflow:auto;max-width:100%;height:350px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expired-by-product-category-container">
+                        <div class="warehouse-container-title-bar">
+                            <div class="title-text" style="font-size: 20px;padding: 5px;">
+                                Nearly Expire By Category
+                            </div>
+                        </div>
+                        <div class="searchbox" style="float: right;">
+                            <input type="text" id="search_category" placeholder="Search Category"/>
+                            <span class="out_stock_category_clear"></span>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="categories-view-container">
+                        </div>
+                    </div>
+                    <div class="filter-report-container">
+                        <div class="filter-by-warehouse-container">
+                            <div class="warehouse-container-title-bar">
+                                <div class="title-text" style="font-size: 20px;padding: 5px;">
+                                    Nearly Expire By Warehouse
+                                </div>
+                            </div>
+                            <div class="warehouse-wise-product-expire">
+                                <table class='warehouse-list'>
+                                     <thead>
+                                         <tr>
+                                             <th>Name</th>
+                                             <th>Expire Count</th>
+                                         </tr>
+                                     </thead>
+                                    <tbody class='warehouse-list-contents'>
+                                     </tbody>
+                                 </table>
+                            </div>
+                        </div>
+                        <div class="filter-by-location-container">
+                            <div class="location-container-title-bar">
+                                <div class="title-text" style="font-size: 20px;padding: 5px;">
+                                    Nearly Expire By Location
+                                </div>
+                            </div>
+                            <div class="location-wise-product-expire">
+                                <table class='location-list'>
+                                     <thead>
+                                         <tr>
+                                             <th>Name</th>
+                                             <th>Expire Count</th>
+                                         </tr>
+                                     </thead>
+                                    <tbody class='location-list-contents'>
+                                     </tbody>
+                                 </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="LocationLine">
+        <tr class='location-line' t-att-data-id='location.location_id'>
+            <t t-if='location.location_name'>
+                <td><t t-esc='location.location_name' /></td>
+            </t>
+            <t t-if='location.expire_count'>
+                <td><t t-esc='location.expire_count' /></td>
+            </t>
+        </tr>
+    </t>
+    <t t-name="ProductDetailListScreen">
+        <div class="product_detail-screen screen">
+            <div class="screen-content" style="max-width: 1254px !important;">
+                <div class="top-screen-container">
+                    <section class="top-content" style="height:55px;top:-10px;">
+                        <div class="main-title-container">
+                            <div class="back-button-container" style="width: 33.33%;float: left;">
+                                <span class='button back'>
+                                    <i class='fa fa-angle-double-left'></i>
+                                    Back
+                                </span>
+                            </div>
+                            <div id="screen_title" style="font-size: 20px;"/>
+                            <div style="float: right;margin-right: 10px;">
+                                <input type="text" style="width: 120px;" id="search_product_detail_exp"
+                                       placeholder="Search Product/Lot"/>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="main-screen-container main_screen_fix">
+                    <div class='subwindow-container-fix touch-scrollable scrollable-y'>
+                        <table class='product-detail-list'>
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Lot/Serial</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody class='product-detail-list-contents'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-extend="OrderWidget">
+        <t t-jquery="div.order-container" t-operation="replace">
+            <div class="order-container">
+                <div class="order-scroller touch-scrollable">
+                    <div class="order">
+                        <t t-if="orderlines.length === 0">
+                            <div class='order-empty'>
+                                <i class='fa fa-shopping-cart'/>
+                                <h1>Your shopping cart is empty</h1>
+                            </div>
+                        </t>
+                        <t t-if="orderlines.length > 0">
+                            <ul class="orderlines"></ul>
+                            <!-- 	                        <div>Can add extra things linke total items, lyalty</div> -->
+                        </t>
+                    </div>
+                </div>
+                <t t-if="orderlines.length &gt; 0">
+                    <div class="summary clearfix" id="total_pay">
+                        <div class="line">
+                            <div class='entry total'>
+                                <span class="label">Order Total: </span>
+                                <span class="value total_value">0.00 €</span>
+                                <br/>
+                                <span class='subentry'>Taxes: <span class="value">0.00€</span></span>
+                                <t t-if="widget.pos and widget.pos.config.pos_promotion">
+                                    <span class='discount promotion-disc extra_things' style="font-size: 12px;">Promo Disc: <span
+                                            class="value">0.00€</span></span>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </t>
+    <t t-name="ProductDetailLine">
+        <tr class='product-line' t-att-data-id='product.id'>
+            <t t-if="product.display_name">
+                <td>
+                    <t t-esc="product.display_name"/>
+                </td>
+            </t>
+            <t t-if="product.lot_id[1]">
+                <td>
+                    <t t-esc="product.lot_id[1]"/>
+                </td>
+            </t>
+            <t t-if="product.quantity">
+                <td>
+                    <t t-esc="product.quantity"/>
+                </td>
+            </t>
+        </tr>
+    </t>
+    <t t-name="ExpireByCategory">
+        <t t-if="category">
+            <div class="expired-detail-container">
+                <div class="expired-detail-details">
+                    <div class="expired-product-count-category" style="background:#D5FEB9;"
+                         t-att-data-id="category.categ_id">
+                        <br/>
+                        <br/>
+                        <span class="count-text" id="10days">
+                            <t t-esc="category.qty"/>
+                        </span>
+                    </div>
+                    <div class="day-in-expiry">
+                        <div align="center" style="margin-top: 35px;">
+                            <span style="font-size: 15px;">
+                                <t t-esc="category.categ_name"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </t>
+    <t t-name="WarehouseLine">
+        <tr class='warehouse-line' t-att-data-id='warehouse.location_id'>
+            <t t-if='warehouse.warehouse_name'>
+                <td class="warehouse_name"><t t-esc='warehouse.warehouse_name' /></td>
+            </t>
+            <t t-if='warehouse.expire_count'>
+                <td class="warehouse_count"><t t-esc='warehouse.expire_count' /></td>
+            </t>
+        </tr>
+    </t>
+
+
+
+</templates>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery="div.lsc" t-operation="append">
+            <t t-if="widget.pos.config.enable_bag_charges">
+                        <div id="bag_charges" title="Apply Bag Charges" class="btn_icon_set">
+                            <img src="/kzm_pos_bag/static/src/img/icons/bags.png"/>
+                            <span class="btn_span_set">Bag charges</span>
+                        </div>
+            </t>
+        </t>
+    </t>
+    <t t-extend="OrderWidget">
+        <t t-jquery="div.order-container" t-operation="replace">
+            <div class="order-container">
+                <div class="order-scroller touch-scrollable">
+                    <div class="order">
+                        <t t-if="orderlines.length === 0">
+                            <div class='order-empty'>
+                                <i class='fa fa-shopping-cart'/>
+                                <h1>Your shopping cart is empty</h1>
+                            </div>
+                        </t>
+                        <t t-if="orderlines.length > 0">
+                            <ul class="orderlines"></ul>
+                            <!-- 	                        <div>Can add extra things linke total items, lyalty</div> -->
+                        </t>
+                    </div>
+                </div>
+                <t t-if="orderlines.length &gt; 0">
+                    <div class="summary clearfix" id="total_pay">
+                        <div class="line">
+                            <div class='entry total'>
+                                <span class="label">Order Total: </span>
+                                <span class="value total_value">0.00 €</span>
+                                <br/>
+                                <span class='subentry'>Taxes: <span class="value">0.00€</span></span>
+                                <t t-if="widget.pos and widget.pos.config.pos_promotion">
+                                    <span class='discount promotion-disc extra_things' style="font-size: 12px;">Promo Disc: <span
+                                            class="value">0.00€</span></span>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </t>
+
+</templates>

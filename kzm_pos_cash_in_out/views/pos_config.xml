@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="money_in_out_pos_config_form_view_inherit" model="ir.ui.view">
+            <field name="name">pos.config.form.view.inherit</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="kzm_pos_config.kzm_pos_config_form_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='kzm_pos_config']" position='inside'>
+                    <div class="col-xs-12 col-md-6 o_setting_box" id="money_in_out">
+                        <div class="o_setting_left_pane">
+                            <field name="money_in_out"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="money_in_out"/>
+                            <div class="text-muted" id="money_in_out">
+                                Put money in/ Take money out
+                            </div>
+                            <div class="content-group mt16" attrs="{'invisible' : [('money_in_out', '=', False)]}">
+                                <div class="row mt16">
+                                    <label string="Receipt for money in/out" for="money_in_out_receipt"
+                                           class="col-md-3 o_light_label" style="width: 170px;"/>
+                                    <field name="money_in_out_receipt"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
